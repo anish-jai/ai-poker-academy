@@ -1,16 +1,27 @@
 # 🃏 AI Poker Academy
 
-🎯 A Python-based interactive poker game built with the CMU Graphics library. The project includes AI-driven player behaviors and visual elements such as cards, a poker table, and probabilities.
+🎯 A Python-based interactive poker game built with the CMU Graphics library. The project features **Monte Carlo simulation-based probability calculations** for realistic poker odds and AI-driven player behaviors with beautiful visual elements.
+
 Intended for players new to poker or looking to improve probability calculations and decision-making skills at the table.
 
 ## ✨ Features
 
 - 🤖 **Interactive Poker Game**: Play Texas Hold'em with AI opponents
-- **AI Players**: Multiple AI personalities (Scared, Neutral, Risky, Random)
-- 📊 **Probability Display**: Real-time hand probability calculations (Press Space!)
+- 🎲 **Monte Carlo Simulation Engine**: Real-time poker probability calculations using advanced Monte Carlo methods (up to 10000 simulations per decision)
+- 📊 **Live Probability Display**: See your winning chances calculated through Monte Carlo simulation (Press Space!)
+- **AI Players**: Multiple AI personalities (Scared, Neutral, Risky, Random) with Monte Carlo-driven decision making
 - **Visual Interface**: Beautiful graphics with poker table, cards, and animations
 - **Customizable Players**: Add/remove players and customize AI types
-- ⚡ **Speed Controls**: Adjust game speed for better experience
+- **Speed Controls**: Adjust game speed for better experience
+
+## 🧮 Monte Carlo Simulation Technology
+
+The game uses  **Monte Carlo Methods** to calculate poker probabilities in real-time:
+
+- **Outcome Simulation**: Runs 3000+ random simulations for each hand evaluation
+- **Dynamic Probability Calculation**: Accounts for known cards (your hand + community cards) and simulates all possible remaining scenarios
+- **AI Decision Making**: Each AI player uses Monte Carlo-calculated "betability" scores to make realistic betting decisions
+- **Real-time Updates**: Probabilities update as community cards are revealed throughout each hand
 
 ## 📋 Prerequisites
 
@@ -67,7 +78,7 @@ python main.py
 ### Shortcut Commands
 - ⬆️ **Up Arrow**: Increase game speed
 - ⬇️ **Down Arrow**: Decrease game speed
-- 🔍 **Space**: Toggle probability display for your hand
+- 🔍 **Space**: Toggle Monte Carlo probability display for your hand
 
 ### Game Commands
 - **b**: Bet - Match the current bet amount 💰
@@ -86,11 +97,11 @@ python main.py
    - Customize player names
    - Click "Start Game" to begin
 
-2. **AI Personalities**:
-   - 😰 **Scared**: Conservative player, folds easily
-   - 😐 **Neutral**: Balanced decision making
-   - 😤 **Risky**: Aggressive player, bets frequently
-   - 🎲 **Random**: Unpredictable behavior
+2. **AI Personalities** (All powered by Monte Carlo simulation):
+   - 😰 **Scared**: Conservative player, requires high Monte Carlo confidence to bet
+   - 😐 **Neutral**: Balanced decision making based on simulation probabilities
+   - 😤 **Risky**: Aggressive player, bets with lower Monte Carlo thresholds
+   - 🎲 **Random**: Unpredictable behavior with occasional Monte Carlo influence
 
 ## 📖 Game Rules
 
@@ -98,6 +109,7 @@ python main.py
 - **Starting Money**: Each player starts with $1000 💵
 - **Buy-in**: $10 minimum bet per round
 - **Objective**: Win the pot by having the best hand or making others fold 🏆
+- **Probability Calculations**: All odds calculated using Monte Carlo simulation methods
 
 ## 📁 File Structure
 
@@ -106,7 +118,7 @@ ai-poker-academy/
 ├── README.md
 └── src/
     ├── main.py          # Main game logic
-    ├── Player.py        # Player and AI logic
+    ├── Player.py        # Player, AI logic & Monte Carlo simulation engine
     ├── Card.py          # Card class and graphics
     ├── Deck.py          # Deck management
     └── images/          # All game graphics
@@ -145,15 +157,21 @@ ai-poker-academy/
    - **Solution**: Ensure all image files are in the src/images/ folder
    - Required files: introScreen.png, instructions.png, poker_table.png, back_card.jpg, Spades.png, Diamonds.png, Hearts.png, Clubs.png
 
+6. **Monte Carlo simulation running slowly**
+   - **Solution**: The game runs 3000+ simulations per decision for accuracy - this is normal
+   - Use speed controls (arrow keys) to adjust game pace if needed
+
 ### Performance Tips 💡
 
 - Use arrow keys to adjust game speed for better experience
-- Toggle probability display with spacebar to see your winning chances
+- Toggle Monte Carlo probability display with spacebar to see your winning chances
 - Use the game log navigation to review previous actions
+- Monte Carlo calculations are most accurate when more community cards are revealed
 
 ## 👏 Credits
 
 - **Author**: Anish Jain
+- **Monte Carlo Engine**: Custom implementation for poker probability simulation
 - **Graphics**: CMU Graphics library and custom designs
 - **Poker Hands Reference**: [Poker Harder](https://www.pokerharder.com/img/p/3/pokerhands_big.jpg)
 - **Other Designs**: Canva
