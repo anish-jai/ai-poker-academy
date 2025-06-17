@@ -122,26 +122,26 @@ ai-poker-academy/
 
 ## 🔧 Troubleshooting
 
-### Common Issues
+### ❌ Common Issues
 
-1. **"FileNotFoundError: introScreen.png"** ❌
+1. **"FileNotFoundError: introScreen.png"** 
    - **Solution**: Make sure you're running the game from the src directory
    - Run: `cd src && python main.py`
    - The game automatically looks for images in the src/images/ folder
 
-2. **CMU Graphics not found** ❌
+2. **CMU Graphics not found**
    - **Solution**: Install the library: `pip install cmu-graphics`
    - **Make sure your virtual environment is activated first**
 
-3. **Virtual environment activation issues** ❌
+3. **Virtual environment activation issues**
    - **Solution**: Ensure you're in the project root directory when creating the virtual environment
    - Run: `python3 -m venv venv` from the project root
    - Activate with: `source venv/bin/activate` (macOS/Linux) or `venv\Scripts\activate` (Windows)
 
-4. **Python version issues** ❌
+4. **Python version issues**
    - **Solution**: Use Python 3.7 or higher
 
-5. **Missing image files** ❌
+5. **Missing image files**
    - **Solution**: Ensure all image files are in the src/images/ folder
    - Required files: introScreen.png, instructions.png, poker_table.png, back_card.jpg, Spades.png, Diamonds.png, Hearts.png, Clubs.png
 
