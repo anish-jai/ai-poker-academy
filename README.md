@@ -1,6 +1,7 @@
-# Poker Pal
+# AI Poker Academy
 
 A Python-based interactive poker game built with the CMU Graphics library. The project includes AI-driven player behaviors and visual elements such as cards, a poker table, and probabilities.
+Intended for players new to poker or looking to improve probability calculations and decision-making skills at the table.
 
 ## Features
 
@@ -21,7 +22,7 @@ A Python-based interactive poker game built with the CMU Graphics library. The p
 1. **Clone or download the project** to your local machine
 2. **Navigate to the project directory**:
    ```bash
-   cd /path/to/pokerpalTP3
+   cd /path/to/ai-poker-academy
    ```
 3. **Create and activate a Python virtual environment**:
    ```bash
@@ -94,9 +95,8 @@ python main.py
 ## File Structure
 
 ```
-pokerpalTP3/
+ai-poker-academy/
 ├── README.md
-├── readme.txt
 └── src/
     ├── main.py          # Main game logic
     ├── Player.py        # Player and AI logic
